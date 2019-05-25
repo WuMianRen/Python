@@ -1,4 +1,8 @@
 class Test:
+    # 只能对当前的类有效   对其子类无效
+    # 限定Test对象只能绑定_name, _age和_gender属性
+    __slots__ = "foo", "too"
+
     def __init__(self, foo, too):
         # 属性变为了私有[__]
         self.__foo = foo
